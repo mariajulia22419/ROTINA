@@ -1,0 +1,76 @@
+
+/* Fluxograma da minha rotina diária */
+
+.flow-section {
+  background: #f0eaff;
+  padding: 80px 24px;
+}
+
+.flowchart {
+  max-width: 600px;
+  margin: 35px auto 0;
+  text-align: center;
+}
+
+.flow-node {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 16px 22px;
+  border: 2px solid #b8a0ed;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #39205f;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 5px 15px #39205f12;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flow-node:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px #7650c926;
+}
+
+.flow-node.start {
+  max-width: 200px;
+  color: white;
+  background: #7650c9;
+  border-color: #7650c9;
+  border-radius: 30px;
+}
+
+.flow-node.action {
+  background: #ffffff;
+}
+
+.connector {
+  width: 3px;
+  height: 30px;
+  margin: 0 auto;
+  background: #a78ae9;
+  position: relative;
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-right: 3px solid #a78ae9;
+  border-bottom: 3px solid #a78ae9;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 480px) {
+  .flow-node {
+    max-width: 290px;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .flow-section {
+    padding: 55px 16px;
+  }
+}
